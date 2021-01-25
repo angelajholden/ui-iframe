@@ -1,0 +1,132 @@
+body {
+	text-align: center;
+}
+
+.main {
+	max-width: 700px;
+	margin: 0 auto 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.video {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.video_thumb {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+
+.overlay::before {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.video_thumb img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.video_play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	-webkit-appearance: none;
+	border: none;
+	background-color: transparent;
+}
+
+.video_play svg {
+	width: 100px;
+	height: auto;
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	z-index: 0;
+}
+
+.embed-container.clicked {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	padding-bottom: 50.625%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lines {
+	display: none;
+	-webkit-appearance: none;
+	background: transparent;
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	width: 35px;
+	height: 35px;
+	margin: 1rem 0;
+	padding: 0;
+	z-index: 2;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.lines.active {
+	display: block;
+}
+
+.lines span {
+	display: block;
+	width: 35px;
+	height: 3px;
+	margin: 5px 0;
+	background-color: #fff;
+	border-radius: 50vh;
+}
+
+.lines span:nth-of-type(1) {
+	transform: rotateZ(45deg) translate(2px, 3.667px);
+}
+
+.lines span:nth-of-type(2) {
+	transform: rotateZ(-45deg) translate(2px, -3.667px);
+}

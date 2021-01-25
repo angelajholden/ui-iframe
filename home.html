@@ -1,3 +1,44 @@
-<div class="embed-container">
-    <iframe title="Tuesday Morning Jazz" width="560" height="315" src="https://www.youtube.com/embed/PjjqskHmmfU" srcdoc="<style>html,body{ width:100%; height:100%; margin:0}a{ display:block; width:100%; height:100%; background-color:#000}img{ position:absolute; top:0; left:0; display:block; width:100%; height:100%; object-fit:cover; opacity:0.65; z-index:0}span{ position:absolute; width:100px; height:100px; top:50%; left:50%; transform:translate(-52px, -52px); border:2px solid #fff; border-radius:50%; z-index:1}svg{ width:75px; height:auto; padding:12px 24px}</style><a href=https://www.youtube.com/embed/PjjqskHmmfU?autoplay=1><img src='https://picsum.photos/1024/768' alt='Tuesday Morning Jazz' /><span><svg xmlns='http://www.w3.org/2000/svg' fill='#fff' width='24' height='24' viewBox='0 0 24 24'><path d='M21 12l-18 12v-24z' /></svg></span></a>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UI iframe</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1 class="title">UI iframe</h1>
+		</header>
+
+		<main class="main">
+			<div class="video">
+				<div class="embed-container">
+					<iframe id="video" title="Tuesday Morning Jazz" width="560" height="315" src="https://www.youtube.com/embed/PjjqskHmmfU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+				</div>
+
+				<button aria-label="Close Video" class="lines">
+					<span></span>
+					<span></span>
+				</button>
+
+				<figure class="video_thumb">
+					<img src="https://picsum.photos/1024/768" alt="placeholder" />
+					<button aria-label="Watch Video" class="video_play">
+						<svg viewBox="0 0 68 68">
+							<circle cx="34" cy="34" r="34" fill="#9e28b5"></circle>
+							<path fill="none" d="M44 34.5L29 45V24l15 10.5z"></path>
+							<path fill="#fff" d="M44 34.5L29 45V24l15 10.5z"></path>
+						</svg>
+					</button>
+				</figure>
+			</div>
+			<!-- <div class="video">
+				<div class="embed-container">
+					<iframe title="Tuesday Morning Jazz" width="560" height="315" src="https://www.youtube.com/embed/PjjqskHmmfU" srcdoc="<style>html,body{ width:100%; height:100%; margin:0}a{ display:block; width:100%; height:100%; background-color:#000}img{ position:absolute; top:0; left:0; display:block; width:100%; height:100%; object-fit:cover; opacity:0.65; z-index:0}span{ position:absolute; width:100px; height:100px; top:50%; left:50%; transform:translate(-52px, -52px); border:2px solid #fff; border-radius:50%; z-index:1}svg{ width:75px; height:auto; padding:12px 24px}</style><a href=https://www.youtube.com/embed/PjjqskHmmfU?autoplay=1><img src='https://picsum.photos/1024/768' alt='Tuesday Morning Jazz' /><span><svg xmlns='http://www.w3.org/2000/svg' fill='#fff' width='24' height='24' viewBox='0 0 24 24'><path d='M21 12l-18 12v-24z' /></svg></span></a>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+				</div>
+			</div> -->
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
